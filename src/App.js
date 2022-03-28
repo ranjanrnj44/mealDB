@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+//import all components
+import { CategoryComponent } from "./components/CategoryComponent/CategoryComponent";
+import SearchComponent from "./components/search/SearchComponent";
+import CategorySingleProduct from "./components/CategoryComponent/CategorySingleProduct";
+//react router./components/CategoryComponent/CategorySingleProduct
+import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 style={{ textAlign: "center" }}>The Meal DB</h1>
+      <Router>
+        <nav>
+          <Link to="/">Category</Link> &nbsp;
+          <Link to="/search">Search</Link>
+        </nav>
+        <Switch>
+          <Route exact path="/" component={CategoryComponent} />
+          <Route path="/search" component={SearchComponent} />
+          <Route path="/meal/:name" component={CategorySingleProduct} />
+        </Switch>
+      </Router>
     </div>
   );
 }
-
-export default App;

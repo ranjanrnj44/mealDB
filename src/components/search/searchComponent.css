@@ -1,0 +1,42 @@
+.searchItems {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.searchItem-cover {
+  width: 20rem;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.searchItem-cover img {
+  width: 100%;
+  border-radius: 50%;
+}
+.searchItem-cover h3 {
+  text-align: center;
+}
+.searchItem-cover p {
+  font-size: 1rem;
+}
+
+/*form*/
+form {
+  text-align: center;
+}
+form input[type="text"] {
+  height: 2rem;
+  width: 20rem;
+}
+form button[type="submit"] {
+  padding: 0.7rem;
+  width: 5rem;
+  cursor: pointer;
+  border: none;
+}
+form button[type="submit"]:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s all ease;
+}

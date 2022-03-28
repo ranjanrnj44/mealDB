@@ -1,0 +1,26 @@
+.categories {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  flex: 1 1 20rem;
+}
+.categories:link {
+  text-decoration: none;
+}
+.category-cover:hover {
+  background-color: rgb(49, 49, 49);
+  color: white;
+  transition: 0.5s all ease;
+}
+
+.category-cover {
+  width: 20rem;
+  background-color: silver;
+  padding: 0.3rem;
+  margin: 0.2rem;
+  border-radius: 0.5rem;
+  color: black;
+}
+.category-cover h3 {
+  text-align: center;
+}
